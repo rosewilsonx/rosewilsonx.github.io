@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rose Wilson Exclusive</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="dark">
+<header class="hero">
+  <div class="cover-placeholder" id="cover">Cover Image Placeholder (Add/Change later)</div>
+  <div class="profile-area">
+    <img id="profilePic" src="assets/images/placeholder-profile.png" alt="Profile" class="avatar">
+    <h1>Rose Wilson Exclusive</h1>
+    <p class="bio">Welcome to my exclusive world 🌹 — get closer through my photos, videos, voice & live moments.</p>
+    <div class="socials">
+      <a href="https://instagram.com/rose.wlisonx" target="_blank">@rose.wlisonx</a>
+      <a href="https://t.me/Rosewilsonx" target="_blank">@Rosewilsonx</a>
+    </div>
+    <div class="actions">
+      <a class="btn primary" id="subscribeBtn">Subscribe Now</a>
+      <a class="btn outline" href="meetup.html">Fan Meetup</a>
+    </div>
+    <div class="upload-instructions">
+      <strong>Tip:</strong> Replace <code>assets/images/placeholder-profile.png</code> and add a cover image in the <code>index.html</code> hero area when you upload files to your hosting.
+    </div>
+  </div>
+</header>
+
+<main class="content">
+  <section class="about">
+    <h2>About</h2>
+    <p>Welcome to the official demo page for Rose Wilson Exclusive. This is a safe demo showcasing subscription plans, fan meetup booking calculator (70% payable), and social links. Replace placeholder images and customize content as needed.</p>
+  </section>
+
+  <section class="plans">
+    <h2>Subscription Plans</h2>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="ribbon">Basic</div>
+        <p class="price">₹1,999 / week</p>
+        <ul>
+          <li>Weekly photos & videos</li>
+          <li>Weekly text updates</li>
+        </ul>
+        <button class="plan-btn" data-plan="Basic" data-price="1999">Subscribe - ₹1,999</button>
+      </div>
+      <div class="plan-card recommended">
+        <div class="ribbon">Gold</div>
+        <p class="price">₹2,999 / week</p>
+        <ul>
+          <li>Photos, videos, text</li>
+          <li>Voice messages</li>
+          <li>1 weekly live stream</li>
+        </ul>
+        <button class="plan-btn" data-plan="Gold" data-price="2999">Subscribe - ₹2,999</button>
+      </div>
+      <div class="plan-card">
+        <div class="ribbon">Platinum</div>
+        <p class="price">₹9,999 / week</p>
+        <ul>
+          <li>All content & priority</li>
+          <li>2 personal video calls/week (20 min)</li>
+          <li>Live streaming access</li>
+        </ul>
+        <button class="plan-btn" data-plan="Platinum" data-price="9999">Subscribe - ₹9,999</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="fakeModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h3>Fake Payment (Demo)</h3>
+    <p id="modalText">Processing demo payment...</p>
+    <div class="modal-actions">
+      <button id="confirmPay" class="btn">Confirm (Fake)</button>
+      <button id="cancelPay" class="btn outline">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; Rose Wilson Exclusive</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
