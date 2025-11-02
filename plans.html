@@ -7,50 +7,64 @@
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="dark">
-  <header class="small-header">
-    <a href="index.html" class="logo">Rose Wilson Exclusive</a>
-    <nav><a href="index.html">Home</a> <a href="plans.html">Plans</a> <a href="meetup.html">Fan Meetup</a> <a href="contact.html">Contact</a></nav>
-  </header>
+<header class="small-header">
+  <a href="index.html" class="logo">Rose Wilson Exclusive</a>
+  <nav><a href="index.html">Home</a> <a href="plans.html">Plans</a> <a href="meetup.html">Fan Meetup</a> <a href="contact.html">Contact</a></nav>
+</header>
 
-  <main class="content">
-    <h2>Subscription Plans</h2>
-    <div class="plans-grid">
-      <div class="plan-card">
-        <h3>Basic</h3>
-        <p class="price">₹1,999 / week</p>
-        <ul>
-          <li>Weekly photos & videos</li>
-          <li>Weekly text updates</li>
-        </ul>
-        <button class="btn" onclick="alert('Demo payment: Basic plan selected')">Subscribe (Demo)</button>
-      </div>
-      <div class="plan-card recommended">
-        <h3>Gold</h3>
-        <p class="price">₹2,999 / week</p>
-        <ul>
-          <li>Photos, videos, text</li>
-          <li>Voice messages</li>
-          <li>1 weekly live stream</li>
-        </ul>
-        <button class="btn" onclick="alert('Demo payment: Gold plan selected')">Subscribe (Demo)</button>
-      </div>
-      <div class="plan-card">
-        <h3>Platinum</h3>
-        <p class="price">₹9,999 / week</p>
-        <ul>
-          <li>All content & priority</li>
-          <li>2 personal video calls/week (20 min)</li>
-          <li>Live streaming access</li>
-        </ul>
-        <button class="btn" onclick="alert('Demo payment: Platinum plan selected')">Subscribe (Demo)</button>
-      </div>
+<main class="content">
+  <h2>Subscription Plans</h2>
+  <div class="plans-grid">
+    <div class="plan-card">
+      <div class="ribbon">Basic</div>
+      <p class="price">₹1,999 / week</p>
+      <ul>
+        <li>Weekly photos & videos</li>
+        <li>Weekly text updates</li>
+      </ul>
+      <button class="plan-btn" data-plan="Basic" data-price="1999">Subscribe - ₹1,999</button>
     </div>
-    <p class="note">Payments are demo-only. Integrate Razorpay/Stripe/PayPal in production.</p>
-  </main>
 
-  <footer>
-    <p>&copy; Rose Wilson Exclusive</p>
-  </footer>
-  <script src="assets/js/main.js"></script>
+    <div class="plan-card featured">
+      <div class="ribbon">Gold</div>
+      <p class="price">₹2,999 / week</p>
+      <ul>
+        <li>Photos, videos, text</li>
+        <li>Voice messages</li>
+        <li>1 weekly live stream</li>
+      </ul>
+      <button class="plan-btn" data-plan="Gold" data-price="2999">Subscribe - ₹2,999</button>
+    </div>
+
+    <div class="plan-card">
+      <div class="ribbon">Platinum</div>
+      <p class="price">₹9,999 / week</p>
+      <ul>
+        <li>All content & priority</li>
+        <li>2 personal video calls/week (20 min)</li>
+        <li>Live streaming access</li>
+      </ul>
+      <button class="plan-btn" data-plan="Platinum" data-price="9999">Subscribe - ₹9,999</button>
+    </div>
+  </div>
+  <p class="note">Demo payments only — fake payment simulation included.</p>
+</main>
+
+<div id="paymentModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <button class="modal-close" id="closeModal">&times;</button>
+    <h3 id="modalPlan"></h3>
+    <p id="modalPrice"></p>
+    <label>Card name <input type="text" id="cardName" placeholder="Name on card"></label>
+    <label>Card number <input type="text" id="cardNumber" placeholder="4111 1111 1111 1111"></label>
+    <div class="modal-actions">
+      <button id="confirmPay" class="btn">Confirm (Demo)</button>
+      <button id="cancelPay" class="btn outline">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer"><p>&copy; Rose Wilson Exclusive</p></footer>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
